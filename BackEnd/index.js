@@ -1,14 +1,24 @@
-const http = require('http')
+//import express
+const express = require("express");
+require("dotenv").config()
 
-const hostname = '127.0.0.1'
-const port = 3001
+//define api key
+OPENAI_API_KEY=process.env.OPENAI_API_KEY
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200
-  res.setHeader('Content-Type', 'text/plain')
-  res.end('Hello World\n')
-})
+//create app with express
+const app = express();
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`)
-})
+//define port that will be used
+const port = 3001;
+
+//handle http get request
+app.get("/", (req, res) => {
+  //return hello world to request
+    res.send("Hello World!");
+});
+
+//listen for requests from the defined port
+app.listen(port, () => {
+  //log what port is being used for the app
+  console.log(`listening on port ${port}!`);
+});

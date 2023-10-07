@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend for NameMyProject project. Intermediates between the front end and OpenAI ChatGPT.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Levi-B4/NameMyProject.git"
+  },
+  "author": "Levi Butler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Levi-B4/NameMyProject/issues"
+  },
+  "homepage": "https://github.com/Levi-B4/NameMyProject#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  }
+}
